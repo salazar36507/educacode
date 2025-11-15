@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducaCode | Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">EducaCode</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="recursos.html">Recursos</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="cursos-container">
+    <h1 class="title">Contacto</h1>
+
+    <form onsubmit="enviarMensaje(event)">
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu correo" required>
+        <textarea placeholder="Tu mensaje" required></textarea>
+        <button class="btn" type="submit">Enviar</button>
+    </form>
+
+    <p id="confirmacion" class="hidden mensaje-ok">
+        ¡Tu mensaje ha sido enviado!
+    </p>
+</section>
+
+<script>
+function enviarMensaje(e){
+    e.preventDefault();
+    document.getElementById("confirmacion").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
